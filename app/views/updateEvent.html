@@ -1,0 +1,37 @@
+<center><h1 class="w3-wide">Update Event(s)</h1></center>
+<div class="container">
+        <div class="row" ng-init="getAllEvents()">
+            <div class="col-sm-12">
+                <table id="eventTable" class="table table-bordered table-condensed table-striped table-sm">
+                    <thead>
+                        <tr>
+                                <th style="text-align: center">"Event Id"</th>
+                            <th style="text-align: center">Event Name</th>
+                            <th style="text-align: center">Presenter ID</th>
+                            <th style="text-align: center">Event Date</th>
+                            
+                            <th style="text-align: center">Update Event</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in rows">
+                                <td style="text-align: center">{{row.eventid}}</td>
+                            <td style="text-align: center"><input type="text" placeholder="{{row.ename}}" ng-model="jqEname"></td>
+                            <td style="text-align: center">
+                            <select  ng-model="selectedUserID" name="presenter">
+                                <option value="{{row.userid}}" ng-repeat="row in rows">{{row.userid}}</option>
+                            </select>
+                            </td>
+                            <td style="text-align: center"><input type="text" placeholder="{{row.edate}}"
+                            ng-model="jqEdate"></td>
+                            <td style="text-align: center">{{row.eventid}}</td>
+                            
+                            <td style="text-align: center"><input type="button" style="background-color: black; color: #fff" value="Update" class="btn btn-sm" ng-click="updateEvent(row.eventid)"></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+</div>

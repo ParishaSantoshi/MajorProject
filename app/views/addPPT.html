@@ -1,0 +1,32 @@
+    <!-- GET LIST OF ALL EVENTS WITH A Upload ppt  BUTTON -->
+    <center><h1 class="w3-wide">Add Presentation</h1></center>
+    <div class="container" ng-init="getAllEvents()">
+        <div class="row">
+            <div class="col-sm-9" >
+                <table id="eventTable" class="table table-bordered table-condensed table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center">Event Name</th>
+                            <th style="text-align: center">Presenter Name</th>
+                            <th style="text-align: center">Event Date</th>
+                            <th style="text-align: center">PPT</th>
+                            <th style="text-align: center">Upload PPT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in rows">
+                            <td style="text-align: center">{{row.ename}}</td>
+                            <td style="text-align: center">{{row.userid}}</td>
+                            <td style="text-align: center">{{row.edate}}</td>
+                            <td style="text-align: center"><input type="file"></td>
+                            <td style="text-align: center"><input type="button" style="background-color: black; color: #fff" value="upload" class="btn btn-sm" ng-click="uploadppt(row.eventid)"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+
+
+            </div>
+        </div>
+    </div>

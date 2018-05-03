@@ -1,0 +1,31 @@
+    <!-- GET LIST OF ALL EVENTS WITH A DELETE BUTTON -->
+    <center><h1 class="w3-wide">Remove Event(s)</h1></center>
+    <div class="container" style="margin-top: 30px; margin-left: 20%" ng-init="getAllEvents()">
+        <div class="row">
+            <div class="col-sm-9">
+                <table id="eventTable" class="table table-bordered table-condensed table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center">Event Name</th>
+                            <th style="text-align: center">Presenter ID</th>
+                            <th style="text-align: center">Event Date</th>
+                            <th style="text-align: center">Delete Event</th>
+                        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in rows">
+                            <td style="text-align: center">{{row.ename}}</td>
+                            <td style="text-align: center">{{row.userid}}</td>
+                            <td style="text-align: center">{{row.edate}}</td>
+                            <td style="text-align: center"><input type="button" style="color: white; background-color: black" value="Delete" class="btn btn-sm" ng-click="deleteEvent(row.eventid)"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+
+
+            </div>
+        </div>
+    </div>

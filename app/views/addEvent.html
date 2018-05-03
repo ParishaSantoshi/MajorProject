@@ -1,0 +1,47 @@
+<!--<div class="container" ng-init="getAllusers()">
+    <form ng-submit="registerEvent()">
+        <input type="text" placeholder="Event Name" ng-model="ename">
+        <input type="text" placeholder="Event Description" ng-model="edes">
+        <input type="text" placeholder="Date" ng-model="edate">
+        <input type="file" placeholder="Presentation" id="filePPT"><br>
+        <select  ng-model="selectedUserID" name="presenter">
+           
+            <option value="{{row.userid}}" ng-repeat="row in rows">{{row.uname}}</option>
+        </select>
+        
+        
+        
+        <input type="submit" value="Submit">
+        
+    </form>
+</div>
+
+-->
+
+<center><h2 class="w3-wide" style="background-image: url(../../assets/images/eventjpg.jpg);width: 80%; height:180px; padding-top: 70px;     color: #ffffff">Addition Of New Event </h2></center>
+<div class="container" style="align-content: center" ng-init="getAllusers()">
+        <div class="row">
+            <div class="col-md-9" style="margin-left: 150px">
+                <div class="d-flex flex-column">
+                    <div class="p-2">
+                        <input type="text" class="form-control mr-sm-2 mb-2 mb-sm-0" placeholder="Event Name" ng-model="ename">
+                    </div>
+                    <div class="p-2">
+                        <select  ng-model="selectedUserID" name="presenter" >
+                            <option value="" disabled selected>Please Select Presenter</option>
+                            <option value="{{row.userid}}" ng-repeat="row in rows">{{row.name}}</option>
+                        </select>
+                    </div>
+                    <div class="p-2">
+                        <textarea placeholder="Event Description" class="form-control mr-sm-2 mb-2 mb-sm-0" ng-model="edes"></textarea>
+                    </div>
+                    <div class="p-2">
+                        <input type="date" placeholder="Event Date" class="form-control mr-sm-2 mb-2 mb-sm-0" ng-model="edate">
+                    </div>
+                    <div class="p-1">
+                        <button style="width: auto" type="button" class="btn btn-dark" ng-click="registerEvent()">Register Event</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+</head>
+<body  style="background-image: url(../../assets/images/texture.png)">
+
+<div style="width: 100%;">
+    <div  style="float: left; width: 30%; height: 100%; margin-right: 80px; margin-left: 30px">
+            <h2 style="text-align: center">Send Us your Query</h2>
+        <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="lname">Email Id</label>
+            <input type="text" id="email" name="email" placeholder="Your Email Id here..">
+        
+            <label for="subject">Query</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+        
+            <input type="submit" value="Submit">
+          </form>
+      </div>
+      <div style=" float:left; width:60%" >
+            <h2 style="text-align: center">Reach Us</h2>
+          <div id="map" style="height:350px;width:100%;"></div>
+      </div>
+      </div>
+  </div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 28.474763, lng: 77.476367};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjct0InJnvsLKyO1qXzL8WnBDNPy8hd7w&callback=initMap">
+    </script>
+    <div style="float: right; text-align: right; margin-top: 20px">
+            <p><i class="fa fa-building" aria-hidden="true"></i> <strong>Our Address:</strong> 28/1, Knowledge Park-III, Greater Noida - 201306 (U.P.)</p>
+            <p><span class="glyphicon glyphicon-phone"></span> +91-852-721-5678, +91-956-086-5769 </p>
+            <p><span class="glyphicon glyphicon-envelope"></span> info@delhitechnicalcampus.ac.in </p></div>
+</body>
+</html>
